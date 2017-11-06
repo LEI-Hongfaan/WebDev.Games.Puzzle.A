@@ -2,4 +2,4 @@
 
 ### License
 
-UltimateOrb.Int128 is licensed under the [BSD 3-Clause License](LICENSE).
+WebDev.Games.Puzzle.A is licensed under the [BSD 3-Clause License](LICENSE).
