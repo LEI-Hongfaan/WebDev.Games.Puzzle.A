@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>檔案 0x0012 - GAMA 纜線</title>
+    <link href="./Content/themes/base/all.css" rel="stylesheet" type="text/css" />
+    <link href="./Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="./Scripts/jquery-3.2.1.min.js"></script>
+    <script src="./Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="./Scripts/modernizr-2.8.3.js"></script>
+
+    <link href="./Content/bootstrap.mod.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        #MainForm {
+            position: absolute;
+            width: auto;
+            height: auto;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+        }
+
+        #MainClient {
+            object-fit: contain;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        @media (max-width: 767px) {
+
+            .dropdown-menu > li > a > .menu-shortcut {
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            .dropdown-menu > li > a .ui-accesskey {
+                text-decoration: underline;
+            }
+        }
+
+        .navbar-default .navbar-nav .open .dropdown-menu {
+        }
+
+            .navbar-default .navbar-nav .open .dropdown-menu > li {
+            }
+
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    display: inline-block;
+                }
+
+                    .navbar-default .navbar-nav .open .dropdown-menu > li > a > span {
+                    }
+
+                    .navbar-default .navbar-nav .open .dropdown-menu > li > a > .menu-shortcut {
+                        float: right;
+                        margin-left: 20px;
+                    }
+
+                    .navbar-default .navbar-nav .open .dropdown-menu > li > a > .menu-itemtext {
+                        margin-left: 5px;
+                        margin-right: 15px;
+                    }
+    </style>
+
+    <script src="./Scripts/bootstrap.mod.js"></script>
+    <script src="./Scripts/file0x0012_ThisGame.js"></script>
+    <script src="./Scripts/file0x0012-0.0.1.js"></script>
+</head>
+<body>
+    <section>
+        <div id="MainForm">
+            <div id="StdOut" style="position: absolute; padding-left: 6px; padding-right: 6px; padding-bottom: 6px; left: 0; right: 0; bottom: 0;"></div>
+            <div style="position: absolute; top: 60px; left: 0; right: 0; bottom: 32px;">
+                <canvas id="MainClient" width="600" height="600"></canvas>
+            </div>
+            <div id="MainMenu" style="display: none; margin-bottom: -0.5em;">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#MainMenu-navbar-collapse" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">檔案 0x0012</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="MainMenu-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Game <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="disabled"><a id="MenuItem_NewGame" accesskey="N" href="#"><span class="menu-shortcut">F2</span><span class="glyphicon glyphicon-play"></span> <span class="menu-itemtext"><span class="ui-accesskey">N</span>ew Game</span></a></li>
+                                        <li class="disabled"><a id="MenuItem_Retry" href="#"><span class="menu-shortcut">F3</span><span class="glyphicon glyphicon-fast-backward"></span> <span class="menu-itemtext">Retry</span></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled"><a id="MenuItem_Hint" href="#"><span class="menu-shortcut">Alt+F1</span><span class="glyphicon glyphicon-eye-open"></span> <span class="menu-itemtext">Hint</span></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled"><a id="MenuItem_Undo" href="#"><span class="menu-shortcut">Ctrl+Y</span><span class="glyphicon glyphicon-step-backward"></span> <span class="menu-itemtext">Undo</span></a></li>
+                                        <li class="disabled"><a id="MenuItem_Redo" href="#"><span class="menu-shortcut">Ctrl+Z</span><span class="glyphicon glyphicon-step-forward"></span> <span class="menu-itemtext">Redo</span></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled"><a id="MenuItem_Resign" href="#"><span class="menu-shortcut">F4</span><span class="glyphicon glyphicon-stop"></span> <span class="menu-itemtext">Resign</span></a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="disabled"><a id="MenuItem_SelectDifficulty" href="#"><span class="menu-shortcut">Alt+F2</span><span class="glyphicon glyphicon-stats"></span> <span class="menu-itemtext">Select Difficulty</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a id="MenuItem_About" href="#" data-toggle="modal" data-target="#DialogAbout"><span class="menu-shortcut"></span><span class="glyphicon glyphicon-menu-hamburger" style="visibility: hidden"></span> <span class="menu-itemtext">About</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div style="position: absolute; left: -16768px; top: -16768px; width: 0px; height: 0px;">
+        <div id="DialogAbout" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>&copy; @DateTime.UtcNow.Year LEI Hongfaan. All rights reserved.</h4>
+                        <h4>這個小遊戲是李杭帆獨立開發的原創作品。</h4>
+                        <h4>此 HTML5 + ECMAScript 版本由 Visual Basic .NET 版本改編而得。</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="DialogWin" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">You Win!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>很好，九曲十八彎，您繞出了迷宮。</h5>
+                        <h5>記錄您的分數？</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <h6 class="dlg-statustext"></h6>
+                        <button type="button" class="btn btn-primary dlg-yes" data-dismiss="modal">Upload You Score</button>
+                        <button type="button" class="btn btn-warning dlg-no" data-dismiss="modal">Skip</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="DialogResign" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Resign</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5>您正在結束遊戲，是否儲存？</h5>
+                        <h5>Resign... Save current game?</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary dlg-yes" data-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-warning dlg-no" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-default dlg-cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dlg-result" style="display: none;"></div>
+        </div>
+        <div id="dialogWorkingOnNewStage" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Creating a new map...</h4>
+                        <p>To hide this dialog, click outside.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="DialogLost" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>天線寶寶，說：“你好！”</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
